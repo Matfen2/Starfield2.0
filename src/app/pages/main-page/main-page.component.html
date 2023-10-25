@@ -1,0 +1,71 @@
+<!-- SHOW -->
+<div class="show">
+    <div class="presentSite">
+        <nav class="navbar navbar-expand-lg">
+            <div class="navbar-brand">
+                <img src="/assets/picts/starfieldLogoWhite.jpeg" class="img-fluid w-100" alt="starfield" />
+            </div>
+            <button type="button" id="btnBars" data-bs-toggle="offcanvas" data-bs-target="#sideStar"><i class="fas fa-bars"></i></button>
+            <div class="containNav">
+                <div class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">NEWS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">MEDIA</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">CREATION</a></li>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="containShow">
+        <p class="launcher">Le lancement est prévu le :</p>
+        <p class="dateRelease">06.09.2023</p>
+        <button type="button" id="btnPreRelease" routerLink="/pre-release-page" routerLinkActive="active">PRE-COMMANDER</button>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about">
+    <div class="containAbout">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2>A PROPOS DE STARFIELD</h2>
+                <p>Starfield est une aventure épique au milieu des étoiles, par les créateurs de Skyrim et de Fallout. Dans ce jeu, vous rejoindrez Constellation, un groupe d'explorateurs à la recherche d'artéfacts à travers la galaxie. A vous de répondre à la grande question de l'Humanité : qu'il y a t-il au-delà des étoiles ?</p>  
+            </div>
+            <div class="col-lg-4">
+                <img src="/assets/picts/BethesdaLogo.png" class="img-fluid w-100" alt="bethesdaLogo" />
+            </div>
+        </div>
+    </div>
+    <div class="present">
+        <img src="/assets/picts/starfieldWallpaperVisually.jpg" class="img-fluid w-100" alt="pictVisuel" />
+    </div>
+    <div class="join">
+        <div class="row">
+            <div class="col-lg-9">
+                <h2 class="constellation">REJOIGNEZ LA CONSTALLATION</h2>
+                <p class="updates">Devenez un pionnier pour recevoir des news et des mises à jour à venir concernant Starfield.</p>
+                <button type="button" id="btnJoinUs" routerLink="/join-page" routerLinkActive="active">INSCRIVEZ-VOUS</button>
+            </div>
+            <div class="col-lg-3">
+                <img src="/assets/picts/starfieldConstellation.png" class="img-fluid w-100" alt="constellation" />
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="copyrigth">© Starfield 2023</p>
+        <button type="button" id="btnContact" routerLink="/contact-page" routerLinkActive="active">CONTACT</button>
+    </div>
+</div>
+
+<!-- OFFCANVAS -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="sideStar" style="background-repeat: no-repeat;">
+    <div class="offcanvas-body">
+        <button type="button" id="btnCloseStar" data-bs-dismiss="offcanvas"><i class="fas fa-times"></i></button>
+        <div class="containNav">
+            <div class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">NEWS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">MEDIA</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">CREATION</a></li>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,789 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  display: block;
+}
+
+.show {
+  height: 790px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/picts/starfieldWallpaper.jpg");
+}
+.show .presentSite .navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.show .presentSite .navbar .navbar-brand .img-fluid {
+  height: 100px;
+  cursor: pointer;
+  max-width: 200px;
+  margin-left: 20px;
+}
+.show .presentSite .navbar #btnBars {
+  display: none;
+  font-size: 1.6em;
+  margin-right: 10px;
+  color: azure;
+  border: transparent;
+  background: transparent;
+}
+.show .presentSite .navbar #btnBars:hover {
+  transform: rotate(90deg);
+}
+.show .presentSite .navbar .containNav {
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.show .presentSite .navbar .containNav .navbar-nav {
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.show .presentSite .navbar .containNav .navbar-nav .nav-item .nav-link {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: azure;
+  font-family: nulshock;
+}
+.show .presentSite .navbar .containNav .navbar-nav .nav-item .nav-link:hover {
+  opacity: 0.7;
+}
+.show .containShow {
+  position: absolute;
+  top: 50%;
+  left: 77%;
+  text-align: center;
+  color: azure;
+  transform: translate(-50%, -50%);
+}
+.show .containShow .launcher {
+  font-size: 0.9em;
+  font-family: nulshock;
+}
+.show .containShow .dateRelease {
+  font-size: 3em;
+  margin-top: -10px;
+  font-weight: bold;
+}
+.show .containShow #btnPreRelease {
+  padding: 15px;
+  font-size: 0.7em;
+  color: azure;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  font-family: conthrax;
+  background: transparent;
+  border: 3px solid azure;
+}
+.show .containShow #btnPreRelease:hover {
+  background: rgb(204, 4, 4);
+}
+.show .containShow #btnPreRelease a {
+  color: azure;
+  text-decoration: none;
+}
+
+.about {
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/picts/starfieldBackgroundWhite.jpg");
+}
+.about .containAbout {
+  padding: 40px;
+}
+.about .containAbout .row .col-lg-8 h2 {
+  font-family: nulshock;
+}
+.about .containAbout .row .col-lg-8 p {
+  font-family: conthrax;
+}
+.about .containAbout .row .col-lg-4 {
+  text-align: center;
+}
+.about .containAbout .row .col-lg-4 .img-fluid {
+  height: 150px;
+  max-width: 280px;
+}
+.about .present {
+  text-align: center;
+}
+.about .present .img-fluid {
+  height: 550px;
+  max-width: 950px;
+}
+.about .join {
+  padding: 15px;
+  margin: 25px;
+}
+.about .join .row .col-lg-9 {
+  line-height: 35px;
+  text-align: center;
+}
+.about .join .row .col-lg-9 .constellation {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: nulshock;
+}
+.about .join .row .col-lg-9 .updates {
+  font-size: 1em;
+  font-family: conthrax;
+}
+.about .join .row .col-lg-9 #btnJoinUs {
+  padding: 6px;
+  font-size: 0.7em;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  color: black;
+  font-family: conthrax;
+  background: transparent;
+  border: 3px solid black;
+}
+.about .join .row .col-lg-9 #btnJoinUs:hover {
+  color: azure;
+}
+.about .join .row .col-lg-3 {
+  text-align: center;
+}
+.about .join .row .col-lg-3 .img-fluid {
+  height: 170px;
+  margin-top: 20px;
+  max-width: 150px;
+  margin-left: 20px;
+  text-align: center;
+  padding-bottom: 15px;
+  justify-content: center;
+}
+.about .footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .footer .copyrigth {
+  margin-left: 15px;
+  font-family: nulshock;
+}
+.about .footer #btnContact {
+  padding: 6px;
+  font-size: 0.7em;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  color: black;
+  font-family: conthrax;
+  background: transparent;
+  border: 3px solid black;
+}
+.about .footer #btnContact:hover {
+  color: azure;
+  background: black;
+}
+
+#sideStar {
+  height: 190px;
+  max-width: 160px;
+  border: 1px solid azure;
+  border-radius: 0px 0px 0px 40px;
+}
+#sideStar .offcanvas-body {
+  background-color: black;
+  border: 1px solid azure;
+  border-radius: 0px 0px 0px 40px;
+}
+#sideStar .offcanvas-body #btnCloseStar {
+  position: relative;
+  top: -6%;
+  left: 82%;
+  font-size: 1.4em;
+  color: darkred;
+  border: transparent;
+  background: transparent;
+}
+#sideStar .offcanvas-body .containNav {
+  margin-top: -14px;
+}
+#sideStar .offcanvas-body .containNav .navbar-nav {
+  text-align: center;
+}
+#sideStar .offcanvas-body .containNav .navbar-nav .nav-item .nav-link {
+  font-size: 1.1em;
+  color: azure;
+  font-family: nulshock;
+}
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/picts/starfieldBackgroundContact.jpg");
+}
+.contact #btnClose {
+  position: absolute;
+  top: 3%;
+  left: 98%;
+  cursor: pointer;
+  font-size: 1.4em;
+  color: azure;
+  border: transparent;
+  background: transparent;
+  transform: translate(-50%, -50%);
+}
+.contact .contain .card {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 110%);
+  background-color: black;
+}
+.contact .contain .card .card-body h3 {
+  color: azure;
+  text-align: center;
+  font-family: nulshock;
+}
+.contact .contain .card .card-body form {
+  margin: 10px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.contact .contain .card .card-body form .firstInput input {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.contact .contain .card .card-body form textarea {
+  width: 100%;
+  max-width: 380px;
+  margin: 15px auto;
+  margin-bottom: 4px;
+}
+.contact .contain .card .card-body #btnSend {
+  padding: 4px;
+  margin: auto;
+  display: block;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  color: azure;
+  border-radius: 40px;
+  font-family: nulshock;
+  background: transparent;
+  border: 2px solid azure;
+  transition: all 0.25ms ease;
+}
+.contact .contain .card .card-body #btnSend:hover {
+  color: black;
+  background-color: azure;
+}
+.contact .contain .card .card-body #btnSend:active {
+  transform: translateY(5px);
+}
+
+.joinUs {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/assets/picts/starfieldBackgroundLogIn.jpg");
+}
+.joinUs #btnClose {
+  position: absolute;
+  top: 3%;
+  left: 98%;
+  cursor: pointer;
+  font-size: 1.4em;
+  color: azure;
+  border: transparent;
+  background: transparent;
+  transform: translate(-50%, -50%);
+}
+.joinUs .contain .join {
+  position: absolute;
+  top: 18%;
+  left: 52%;
+  text-align: center;
+}
+.joinUs .contain .join .log {
+  font-size: 1.6em;
+  color: azure;
+  font-family: conthrax;
+}
+.joinUs .contain .join form input {
+  margin-right: 10px;
+  margin-left: 10px;
+  letter-spacing: 2px;
+  font-family: soloist;
+}
+.joinUs .contain .join form .optionConnect {
+  justify-content: center;
+  margin-top: 15px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.joinUs .contain .join form .optionConnect #btnConnect {
+  color: azure;
+  font-family: nulshock;
+  background: transparent;
+  border: 2px solid azure;
+}
+.joinUs .contain .join form .optionConnect #btnConnect:hover {
+  opacity: 0.7;
+}
+.joinUs .contain .join form .optionConnect .inscribe {
+  margin-top: 7px;
+}
+.joinUs .contain .join form .optionConnect .inscribe a {
+  font-family: nulshock;
+}
+.joinUs .contain .join form .optionConnect .inscribe a:hover {
+  color: azure;
+}
+
+.signUp {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/picts/starfieldBackgroundSignUp.jpg");
+}
+.signUp #btnClose {
+  position: absolute;
+  top: 3%;
+  left: 99%;
+  cursor: pointer;
+  font-size: 1.4em;
+  color: black;
+  border: transparent;
+  background: transparent;
+  transform: translate(-50%, -50%);
+}
+.signUp .contain .inscribe {
+  position: absolute;
+  top: 16%;
+  left: -3%;
+  text-align: center;
+}
+.signUp .contain .inscribe .log {
+  font-size: 1.6em;
+  color: black;
+  font-family: conthrax;
+}
+.signUp .contain .inscribe form .firstInput input {
+  margin-right: 10px;
+  margin-left: 10px;
+  letter-spacing: 2px;
+  font-family: soloist;
+}
+.signUp .contain .inscribe form .secondInput {
+  margin: 16px auto;
+}
+.signUp .contain .inscribe form .secondInput input {
+  margin-right: 10px;
+  margin-left: 10px;
+  letter-spacing: 2px;
+  font-family: soloist;
+}
+.signUp .contain .inscribe form .optionInscribe {
+  justify-content: center;
+  margin-top: 5px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.signUp .contain .inscribe form .optionInscribe #btnInscribe {
+  color: black;
+  font-family: nulshock;
+  background: transparent;
+  border: 2px solid black;
+}
+.signUp .contain .inscribe form .optionInscribe #btnInscribe:hover {
+  opacity: 0.7;
+}
+.signUp .contain .inscribe form .optionInscribe .connect {
+  margin-top: 12px;
+}
+.signUp .contain .inscribe form .optionInscribe .connect a {
+  font-family: nulshock;
+}
+.signUp .contain .inscribe form .optionInscribe .connect a:hover {
+  color: black;
+}
+
+.preRelease {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/picts/starfieldBackgroundPreRelease.png");
+}
+.preRelease #btnClose {
+  position: absolute;
+  top: 3%;
+  left: 99%;
+  cursor: pointer;
+  font-size: 1.4em;
+  color: azure;
+  border: transparent;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 2px #000000;
+}
+.preRelease .contain {
+  position: relative;
+  top: 5%;
+}
+.preRelease .contain .choose {
+  color: azure;
+  text-align: center;
+  font-family: nulshock;
+  text-shadow: 2px 2px 2px #000000;
+}
+.preRelease .contain .listRelease {
+  margin: 10px auto;
+  text-align: center;
+}
+.preRelease .contain .listRelease .row .col-lg-6 {
+  margin: 19px auto;
+}
+.preRelease .contain .listRelease .row .col-lg-6 .img-fluid {
+  height: 320px;
+  cursor: pointer;
+  max-width: 600px;
+  transition: all 0.25ms ease;
+}
+.preRelease .contain .listRelease .row .col-lg-6 .img-fluid:hover {
+  transform: scale(0.9);
+}
+
+@font-face {
+  font-family: nulshock;
+  src: url("/assets/fonts/nulshock bd.otf");
+}
+@font-face {
+  font-family: conthrax;
+  src: url("/assets/fonts/conthrax-sb.otf");
+}
+@font-face {
+  font-family: soloist;
+  src: url("/assets/fonts/soloist1.ttf");
+}
+@media screen and (max-width: 1440px) {
+  .joinUs .contain .join {
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .show {
+    background-image: url("/assets/picts/starfieldLaunchBackground.jpg");
+  }
+  .show .containShow {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+  }
+  .show .containShow .launcher {
+    display: none;
+  }
+  .show .containShow .dateRelease {
+    display: none;
+  }
+  .show .containShow #btnRelease {
+    background: black;
+  }
+  .show .containShow #btnRelease:hover {
+    background: darkred;
+  }
+  .preRelease #btnClose {
+    left: 98%;
+  }
+  .preRelease .contain .listRelease .row .col-lg-6 .img-fluid {
+    max-width: 410px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .show .presentSite .navbar #btnBars {
+    display: block;
+  }
+  .show .presentSite .navbar .containNav {
+    display: none;
+  }
+  .about .containAbout .row .col-lg-8 {
+    text-align: center;
+  }
+  .about .join .row .col-lg-9 {
+    text-align: center;
+  }
+  .about .join .row .col-lg-3 .img-fluid {
+    margin-right: 40px;
+  }
+  #joinUs .modal-dialog .modal-content {
+    height: auto;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-5 .img-fluid {
+    height: 450px;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form input {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect {
+    padding-bottom: -25px;
+    margin: 20px auto;
+    justify-content: center;
+  }
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-5 .img-fluid {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 875px) {
+  .preRelease .contain .choose {
+    font-size: 1.5em;
+  }
+  .preRelease .contain .listRelease .row .col-lg-6 .img-fluid {
+    max-width: 340px;
+  }
+}
+@media screen and (max-width: 809px) {
+  .joinUs {
+    background-image: url("/assets/picts/starfieldBackgroundLogInResponsive.jpeg");
+  }
+  .joinUs #btnClose {
+    left: 98%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .joinUs .contain .join {
+    left: 13%;
+  }
+  .signUp {
+    background-image: url("/assets/picts/starfieldBackgroundSignUpResponsive.jpeg");
+  }
+  .signUp #btnClose {
+    left: 97%;
+    color: azure;
+  }
+  .signUp .contain .inscribe .row .log {
+    font-size: 1.4em;
+    color: azure;
+  }
+  .signUp .contain .inscribe .row form .optionInscribe #btnInscribe {
+    padding: 3px;
+    color: azure;
+    border: 2px solid azure;
+  }
+  .signUp .contain .inscribe .row form .optionInscribe .connect a:hover {
+    color: azure;
+  }
+}
+@media screen and (max-width: 767px) {
+  .preRelease .contain .listRelease .row .col-lg-6 .img-fluid {
+    height: 140px;
+    max-width: 490px;
+  }
+  .preRelease .contain .listRelease .row .col-lg-6 .img-fluid:hover {
+    transform: scale(1.2);
+  }
+}
+@media screen and (max-width: 645px) {
+  .joinUs #btnClose {
+    left: 96%;
+  }
+  .joinUs .contain .join {
+    left: 6%;
+  }
+  .joinUs .contain .join .log {
+    margin-bottom: -5px;
+  }
+  .joinUs .contain .join form input {
+    margin-top: 10px;
+  }
+  .joinUs .contain .join form .optionConnect {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  #joinUs .modal-dialog .modal-content {
+    width: 70%;
+    margin: auto;
+    display: block;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body #btnClose {
+    transform: translate(0%, -10%);
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-5 .img-fluid {
+    margin: 18px auto;
+    max-width: 100%;
+    text-align: center;
+  }
+  #signUp .modal-dialog .modal-content .modal-body #btnClose {
+    transform: translate(0%, -10%);
+  }
+}
+@media screen and (max-width: 546px) {
+  .signUp .contain .inscribe .row .log {
+    margin-bottom: -6px;
+  }
+  .signUp .contain .inscribe .row form .firstInput input, .signUp .contain .inscribe .row form .secondInput input {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 522px) {
+  .preRelease .contain {
+    top: 9%;
+  }
+  .preRelease .contain .listRelease .row .col-lg-6 .img-fluid {
+    height: 120px;
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .contact .contain .card {
+    max-width: 340px;
+    transform: translate(-50%, 80%);
+  }
+  .contact .contain .card .card-body form .firstInput {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .contain .card .card-body form .firstInput input {
+    width: 76%;
+    margin: 10px auto;
+  }
+  .contact .contain .card .card-body form textarea {
+    max-width: 236px;
+  }
+}
+@media screen and (max-width: 466px) {
+  .preRelease .contain {
+    top: 9%;
+  }
+  .preRelease .contain .choose {
+    font-size: 1.2em;
+  }
+  .preRelease .contain .listRelease .row .col-lg-6 .img-fluid {
+    height: 120px;
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 442px) {
+  .preRelease #btnClose {
+    left: 93%;
+  }
+  .preRelease .contain .choose {
+    letter-spacing: 2px;
+    font-size: 0.6em;
+  }
+  .preRelease .contain .listRelease .row .col-lg-6 .img-fluid:hover {
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 420px) {
+  .about .join .row .col-lg-9 .constellation {
+    width: 100%;
+    margin: auto;
+    display: block;
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 395px) {
+  .signUp .contain .inscribe .row .log {
+    font-size: 1.2em;
+    margin-bottom: -2px;
+  }
+  .signUp .contain .inscribe .row form .optionInscribe {
+    display: flex;
+    flex-direction: column;
+  }
+  .signUp .contain .inscribe .row form .optionInscribe #btnInscribe {
+    padding: 3px;
+    color: azure;
+    border: 2px solid azure;
+  }
+  .signUp .contain .inscribe .row form .optionInscribe .connect a:hover {
+    color: azure;
+  }
+}
+@media screen and (max-width: 375px) {
+  .contact #btnClose {
+    left: 97%;
+  }
+  .contact .contain .card {
+    max-width: 240px;
+    transform: translate(-50%, 65%);
+  }
+  .contact .contain .card .card-body form .firstInput {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .contain .card .card-body form .firstInput input {
+    width: 76%;
+    margin: 10px auto;
+  }
+  .contact .contain .card .card-body form textarea {
+    max-width: 166px;
+  }
+}
+@media screen and (max-width: 366px) {
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect {
+    display: flex;
+    flex-direction: column;
+  }
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect #btnConnect {
+    margin: auto;
+    display: block;
+  }
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect .inscribe {
+    margin: 15px auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  #joinUs .modal-dialog .modal-content {
+    margin: auto;
+    display: block;
+    width: 75%;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .log {
+    font-size: 1.2em;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form input {
+    margin: 10px auto;
+    width: 100%;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect {
+    display: flex;
+    flex-direction: column;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect #btnConnect {
+    margin: auto;
+    display: block;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect .inscribe {
+    margin: 15px auto;
+  }
+}/*# sourceMappingURL=styles.css.map */

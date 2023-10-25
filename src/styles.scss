@@ -1,0 +1,1078 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    display: block;
+}
+
+// MIXIN & ROOT
+$firstColor: azure;
+$secondColor: black;
+$thirdColor: darkred;
+$fourColor: darkgoldenrod;
+$fiveColor: rgb(240, 178, 23);
+$sixColor: rgb(70, 70, 209);
+$sevenColor: rgb(204, 4, 4);
+
+@mixin flex ($flexDirection) {
+    display: flex;
+    flex-direction: $flexDirection;
+}
+
+.show {
+    height: 790px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/starfieldWallpaper.jpg');
+    .presentSite {
+        .navbar {
+            @include flex (row);
+            align-items: center;
+            justify-content: space-between;
+            .navbar-brand {
+                .img-fluid {
+                    height: 100px;
+                    cursor: pointer;
+                    max-width: 200px;
+                    margin-left: 20px;
+                }
+            }
+            #btnBars {
+                display: none;
+                font-size: 1.6em;
+                margin-right: 10px;
+                color: $firstColor;
+                border: transparent;
+                background: transparent;
+                &:hover {
+                    transform: rotate(90deg);
+                }
+            }
+            .containNav {
+                column-gap: 25px;
+                margin-right: 10px;
+                @include flex (row);
+                align-items: center;
+                .navbar-nav {
+                    column-gap: 30px;
+                    .nav-item {
+                        .nav-link {
+                            font-size: 1.2em;
+                            letter-spacing: 2px;
+                            color: $firstColor;
+                            font-family: nulshock;
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .containShow {
+        position: absolute;
+        top: 50%;
+        left: 77%;
+        text-align: center;
+        color: $firstColor;
+        transform: translate(-50%, -50%);
+        .launcher {
+            font-size: 0.9em;
+            font-family: nulshock;
+        }
+        .dateRelease {
+            font-size: 3.0em;
+            margin-top: -10px;
+            font-weight: bold;
+        }
+        #btnPreRelease {
+            padding: 15px;
+            font-size: 0.7em;
+            color: $firstColor;
+            margin-right: 20px;
+            letter-spacing: 2px;
+            font-family: conthrax;
+            background: transparent;
+            border: 3px solid $firstColor;
+            &:hover {
+                background: $sevenColor;
+            }
+            a {
+                color: $firstColor;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// ABOUT
+.about {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/starfieldBackgroundWhite.jpg');
+    .containAbout {
+        padding: 40px;
+        .row {
+            .col-lg-8 {
+                h2 {
+                    font-family: nulshock;
+                }
+                p {
+                    font-family: conthrax;
+                }
+            }
+            .col-lg-4 {
+                text-align: center;
+                .img-fluid {
+                    height: 150px;
+                    max-width: 280px;
+                }
+            }
+        }
+    }
+    .present {
+        text-align: center;
+        .img-fluid {
+            height: 550px;
+            max-width: 950px;
+        }
+    }
+    .join {
+        padding: 15px;
+        margin: 25px;
+        .row {
+            .col-lg-9 {
+                line-height: 35px;
+                text-align: center;
+                .constellation {
+                    font-size: 2.0em;
+                    font-weight: bold;
+                    font-family: nulshock;
+                }
+                .updates {
+                    font-size: 1.0em;
+                    font-family: conthrax;
+                }
+                #btnJoinUs {
+                    padding: 6px;
+                    font-size: 0.7em;
+                    margin-right: 20px;
+                    letter-spacing: 2px;
+                    color: $secondColor;
+                    font-family: conthrax;
+                    background: transparent;
+                    border: 3px solid $secondColor;
+                    &:hover {
+                        color: $firstColor;
+                    }
+                }
+            }
+            .col-lg-3 {
+                text-align: center;
+                .img-fluid {
+                    height: 170px;
+                    margin-top: 20px;
+                    max-width: 150px;
+                    margin-left: 20px;
+                    text-align: center;
+                    padding-bottom: 15px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .footer {
+        @include flex (row);
+        align-items: center;
+        justify-content: space-between;
+        .copyrigth {
+            margin-left: 15px;
+            font-family: nulshock;
+        }
+        #btnContact {
+            padding: 6px;
+            font-size: 0.7em;
+            margin-right: 10px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            color: $secondColor;
+            font-family: conthrax;
+            background: transparent;
+            border: 3px solid $secondColor;
+            &:hover {
+                color: $firstColor;
+                background: $secondColor;
+            }
+        }
+    }
+}
+
+// OFFCANVAS
+#sideStar {
+    height: 190px;
+    max-width: 160px;
+    border: 1px solid $firstColor;
+    border-radius: 0px 0px 0px 40px;
+    .offcanvas-body {
+        background-color: $secondColor;
+        border: 1px solid $firstColor;
+        border-radius: 0px 0px 0px 40px;
+        #btnCloseStar {
+            position: relative;
+            top: -6%;
+            left: 82%;
+            font-size: 1.4em;
+            color: $thirdColor;
+            border: transparent;
+            background: transparent;
+        }
+        .containNav {
+            margin-top: -14px;
+            .navbar-nav {
+                text-align: center;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.1em;
+                        color: $firstColor;
+                        font-family: nulshock;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// CONTACT
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/starfieldBackgroundContact.jpg');
+    #btnClose {
+        position: absolute;
+        top: 3%;
+        left: 98%;
+        cursor: pointer;
+        font-size: 1.4em;
+        color: $firstColor;
+        border: transparent;
+        background: transparent;
+        transform: translate(-50%, -50%);
+    }
+    .contain {
+        .card {
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 110%);
+            background-color: $secondColor;
+            .card-body {
+                h3 {
+                    color: $firstColor;
+                    text-align: center;
+                    font-family: nulshock;
+                }
+                form {
+                    margin: 10px auto;
+                    text-align: center;
+                    @include flex (column);
+                    .firstInput {
+                        input {
+                            
+                            margin-left: 10px;
+                            margin-right: 10px;
+                        }
+                    }
+                    textarea {
+                        width: 100%;
+                        max-width: 380px;
+                        margin: 15px auto;
+                        margin-bottom: 4px;
+                    }
+                }
+                #btnSend {
+                    padding: 4px;
+                    margin: auto;
+                    display: block;
+                    font-size: 0.9em;
+                    letter-spacing: 2px;
+                    color: $firstColor;
+                    border-radius: 40px;
+                    font-family: nulshock;
+                    background: transparent;
+                    border: 2px solid $firstColor;
+                    transition: all 0.25ms ease;
+                    &:hover {
+                        color: $secondColor;
+                        background-color: $firstColor;
+                    }
+                    &:active {
+                        transform: translateY(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// LOG IN/ SING UP
+.joinUs {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/starfieldBackgroundLogIn.jpg');
+    #btnClose {
+        position: absolute;
+        top: 3%;
+        left: 98%;
+        cursor: pointer;
+        font-size: 1.4em;
+        color: $firstColor;
+        border: transparent;
+        background: transparent;
+        transform: translate(-50%, -50%);
+    }
+    .contain {
+        .join {
+            position: absolute;
+            top: 18%;
+            left: 52%;
+            text-align: center;
+           .log {
+                font-size: 1.6em;
+                color: $firstColor;
+                font-family: conthrax;
+            }
+            form {
+                input {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    letter-spacing: 2px;
+                    font-family: soloist;
+                }
+                .optionConnect {
+                    justify-content: center;
+                    margin-top: 15px;
+                    column-gap: 20px;
+                    align-items: center;
+                    @include flex (row);
+                    #btnConnect {
+                        color: $firstColor;
+                        font-family: nulshock;
+                        background: transparent;
+                        border: 2px solid $firstColor;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                    .inscribe {
+                        margin-top: 7px;
+                        a {
+                            font-family: nulshock;
+                            &:hover {
+                                color: $firstColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.signUp {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/starfieldBackgroundSignUp.jpg');
+    #btnClose {
+        position: absolute;
+        top: 3%;
+        left: 99%;
+        cursor: pointer;
+        font-size: 1.4em;
+        color: $secondColor;
+        border: transparent;
+        background: transparent;
+        transform: translate(-50%, -50%);
+    }
+    .contain {
+        .inscribe {
+            position: absolute;
+            top: 16%;
+            left: -3%;
+            text-align: center; 
+            .log {
+                font-size: 1.6em;
+                color: $secondColor;
+                font-family: conthrax;
+            }
+            form {
+                .firstInput {
+                    input {
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        letter-spacing: 2px;
+                        font-family: soloist;
+                    }
+                }
+                .secondInput {
+                    margin: 16px auto;
+                    input {
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        letter-spacing: 2px;
+                        font-family: soloist;
+                    }
+                }
+                .optionInscribe {
+                    justify-content: center;
+                    margin-top: 5px;
+                    column-gap: 20px;
+                    align-items: center;
+                    @include flex (row);
+                    #btnInscribe {
+                        color: $secondColor;
+                        font-family: nulshock;
+                        background: transparent;
+                        border: 2px solid $secondColor;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                    .connect {
+                        margin-top: 12px;
+                        a {
+                            font-family: nulshock;
+                            &:hover {
+                                color: $secondColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PRE-RELEASE
+.preRelease {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/starfieldBackgroundPreRelease.png');
+    #btnClose {
+        position: absolute;
+        top: 3%;
+        left: 99%;
+        cursor: pointer;
+        font-size: 1.4em;
+        color: $firstColor;
+        border: transparent;
+        background: transparent;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 2px #000000;
+    }
+    .contain {
+        position: relative;
+        top: 5%;
+        .choose {
+            color: $firstColor;
+            text-align: center;
+            font-family: nulshock;
+            text-shadow: 2px 2px 2px #000000;
+        }
+        .listRelease {
+            margin: 10px auto;
+            text-align: center;
+            .row {
+                .col-lg-6 {
+                    margin: 19px auto;
+                    .img-fluid {
+                        height: 320px;
+                        cursor: pointer;
+                        max-width: 600px;
+                        transition: all 0.25ms ease;
+                        &:hover {
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// FONTS
+@font-face {
+    font-family: nulshock;
+    src: url('/assets/fonts/nulshock bd.otf');
+}
+
+@font-face {
+    font-family: conthrax;
+    src: url('/assets/fonts/conthrax-sb.otf');
+}
+
+@font-face {
+    font-family: soloist;
+    src: url('/assets/fonts/soloist1.ttf');
+}
+
+// MEDIA QUERRY
+@media screen and (max-width: 1440px) {
+    .joinUs {
+        .contain {
+           .join {
+            position: absolute;
+            top: 18%;
+            left: 10%;
+            text-align: center;
+           } 
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .show {
+        background-image: url('/assets/picts/starfieldLaunchBackground.jpg');
+        .containShow {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            .launcher {
+                display: none;
+            }
+            .dateRelease {
+                display: none;
+            }
+            #btnRelease {
+                background: $secondColor;
+                &:hover {
+                    background: $thirdColor;
+                }
+            }
+        }
+    } 
+    .preRelease {
+        #btnClose {
+            left: 98%;
+        }
+        .contain {
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            max-width: 410px;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: 992px) {
+    .show {
+        .presentSite {
+            .navbar {
+                #btnBars {
+                    display: block;
+                }
+                .containNav {
+                    display: none;
+                }
+            }
+        }
+    }
+    .about {
+        .containAbout {
+            .row {
+                .col-lg-8 {
+                    text-align: center;
+                }
+            }
+        }
+        .join {
+            .row {
+                .col-lg-9 {
+                    text-align: center;
+                }
+                .col-lg-3 {
+                    .img-fluid {
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+    #joinUs {
+        .modal-dialog {
+            .modal-content {
+                height: auto;
+                .modal-body {
+                    .row {
+                        .col-lg-5 {
+                            .img-fluid {
+                                height: 450px;
+                            }
+                        }
+                        .col-lg-7 {
+                            .contentForm {
+                                form {
+                                    input {
+                                        margin-right: 10px;
+                                        margin-left: 10px;
+                                    }
+                                    .optionConnect {
+                                        padding-bottom: -25px;
+                                        margin: 20px auto;
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #signUp {
+        .modal-dialog {
+            .modal-content {
+                .modal-body {
+                    .row {
+                        .col-lg-5 {
+                            .img-fluid {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .preRelease {
+        .contain {
+            .choose {
+                font-size: 1.5em;
+            }
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            max-width: 340px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+ 
+@media screen and (max-width: 809px) {
+    .joinUs {
+        background-image: url('/assets/picts/starfieldBackgroundLogInResponsive.jpeg');
+        #btnClose {
+            left: 98%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .joinUs {
+        .contain {
+            .join {
+                left: 13%;
+            }
+        }
+    }
+    .signUp {
+        background-image: url('/assets/picts/starfieldBackgroundSignUpResponsive.jpeg');
+        #btnClose {
+            left: 97%;
+            color: $firstColor;
+        }
+        .contain {
+            .inscribe {
+                .row {
+                    .log {
+                        font-size: 1.4em;
+                        color: $firstColor;
+                    }
+                    form {
+                        .optionInscribe {
+                            #btnInscribe {
+                                padding: 3px;
+                                color: $firstColor;
+                                border: 2px solid $firstColor;
+                            }
+                            .connect {
+                                a {
+                                    &:hover {
+                                        color: $firstColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .preRelease {
+        .contain {
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            height: 140px;
+                            max-width: 490px;
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 645px) {
+    .joinUs {
+        #btnClose {
+            left: 96%;
+        }
+        .contain {
+            .join {
+                left: 6%;
+                .log {
+                    margin-bottom: -5px;
+                }
+                form {
+                    input {
+                        margin-top: 10px;
+                    }
+                    .optionConnect {
+                        @include flex (column);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+  #joinUs {
+    .modal-dialog {
+        .modal-content {
+            width: 70%;
+            margin: auto;
+            display: block;
+            .modal-body {
+                #btnClose {
+                    transform: translate(0%, -10%);
+                }
+                .row {
+                    .col-lg-5 {
+                        .img-fluid {
+                            margin: 18px auto;
+                            max-width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+  #signUp {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                #btnClose {
+                    transform: translate(0%, -10%);
+                }
+            }
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 546px) {
+    .signUp {
+        .contain {
+            .inscribe {
+                .row {
+                    .log {
+                        margin-bottom: -6px;
+                    }
+                    form {
+                        .firstInput, .secondInput {
+                            input {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .preRelease {
+        .contain {
+            top: 9%;
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            height: 120px;
+                            max-width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 510px) {
+    .contact {
+        .contain {
+            .card {
+                max-width: 340px;
+                transform: translate(-50%, 80%);
+                .card-body {
+                    form {
+                        .firstInput {
+                            @include flex (column);
+                            input {
+                                width: 76%;
+                                margin: 10px auto;
+                            }
+                        }
+                        textarea {
+                            max-width: 236px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 466px) {
+    .preRelease {
+        .contain {
+            top: 9%;
+            .choose {
+                font-size: 1.2em;
+            }
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            height: 120px;
+                            max-width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 442px) {
+    .preRelease {
+        #btnClose {
+            left: 93%;
+        }
+        .contain {
+            .choose {
+                letter-spacing: 2px;
+                font-size: 0.6em;
+            }
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            &:hover {
+                                transform: scale(0.9);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 420px) {
+    .about {
+        .join {
+            .row {
+                .col-lg-9 {
+                    .constellation {
+                        width: 100%;
+                        margin: auto;
+                        display: block;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .signUp {     
+        .contain {
+            .inscribe {
+                .row {
+                    .log {
+                        font-size: 1.2em;
+                        margin-bottom: -2px
+                    }
+                    form {
+                        .optionInscribe {
+                            @include flex (column);
+                            #btnInscribe {
+                                padding: 3px;
+                                color: $firstColor;
+                                border: 2px solid $firstColor;
+                            }
+                            .connect {
+                                a {
+                                    &:hover {
+                                        color: $firstColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contact {
+        #btnClose {
+            left: 97%;
+        }
+        .contain {
+            .card {
+                max-width: 240px;
+                transform: translate(-50%, 65%);
+                .card-body {
+                    form {
+                        .firstInput {
+                            @include flex (column);
+                            input {
+                                width: 76%;
+                                margin: 10px auto;
+                            }
+                        }
+                        textarea {
+                            max-width: 166px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 366px) {
+    #signUp {
+        .modal-dialog {
+            .modal-content {
+                .modal-body {
+                    .row {
+                        .col-lg-7 {
+                            .contentForm {
+                                form {
+                                    .optionConnect {
+                                        @include flex (column);
+                                        #btnConnect {
+                                            margin: auto;
+                                            display: block;
+                                        }
+                                        .inscribe {
+                                            margin: 15px auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+  #joinUs {
+    .modal-dialog {
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 75%;
+            .modal-body {
+                .row {
+                    .col-lg-7 {
+                        .contentForm {
+                            .log {
+                                font-size: 1.2em;
+                            }
+                            form {
+                                input {
+                                    margin: 10px auto;
+                                    width: 100%;
+                                }
+                                .optionConnect {
+                                    @include flex (column);
+                                    #btnConnect {
+                                        margin: auto;
+                                        display: block;
+                                    }
+                                    .inscribe {
+                                        margin: 15px auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+}
